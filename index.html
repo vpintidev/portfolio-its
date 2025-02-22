@@ -3,19 +3,28 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfolio - Jon Dawson</title>
+        <meta
+            name="description"
+            content="Portfolio di Jon Dawson, Web Developer. Scopri i featured works, le esperienze e i contatti."
+        />
+        <title>Portfolio - Vittorio Pinti</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
         <!-- HEADER -->
-        <header class="navbar">
-            <nav class="nav-container">
+        <header role="banner">
+            <nav
+                class="navbar nav-container"
+                aria-label="Navigazione principale"
+            >
                 <ul class="nav-links">
-                    <li><a href="#" class="active">Home</a></li>
+                    <li>
+                        <a href="#" class="active" aria-current="page">Home</a>
+                    </li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Service</a></li>
                 </ul>
-                <div class="logo">JD</div>
+                <div class="logo">VP</div>
                 <ul class="nav-links">
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Blog</a></li>
@@ -24,133 +33,288 @@
             </nav>
         </header>
 
-        <!-- HERO SECTION -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>I'm Jon Dawson,<br /><span>Web Developer</span></h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                </p>
-                <div class="buttons">
-                    <a href="#" class="btn-light">About</a>
-                    <a href="#" class="btn-dark">Download CV</a>
+        <!-- MAIN -->
+        <main id="main" role="main">
+            <!-- HERO SECTION -->
+            <section class="hero" aria-label="Sezione Hero">
+                <div class="hero-content">
+                    <h1>
+                        I'm Vittorio Pinti,<br />
+                        <span>Web Developer</span>
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                    </p>
+                    <div class="buttons">
+                        <a
+                            href="#"
+                            class="btn-light"
+                            role="button"
+                            aria-label="Informazioni su di me"
+                            >About</a
+                        >
+                        <a
+                            href="#"
+                            class="btn-dark"
+                            role="button"
+                            aria-label="Scarica il CV"
+                            >Download CV</a
+                        >
+                    </div>
                 </div>
-            </div>
-            <div class="hero-image">
-                <img src="images/profile.png" alt="Jon Dawson" />
-            </div>
-        </section>
+                <figure class="hero-image">
+                    <img src="images/profile.png" alt="Jon Dawson" />
+                </figure>
+            </section>
 
-        <section class="portfolio">
-            <h1>Featured Works</h1>
-            <div class="bento-grid">
-                <div class="bento-column span-1">
-                    <div
-                        class="box span-1 bento-item"
-                        style="
-                            background-image: url('images/1.webp');
-                            border: none;
-                        "
-                    ></div>
-                    <div
-                        class="box span-2 bento-item"
-                        style="
-                            background-image: url('images/2.webp');
-                            border: none;
-                        "
-                    ></div>
-                    <div
-                        class="box span-2 bento-item"
-                        style="
-                            background-image: url('images/3.webp');
-                            border: none;
-                        "
-                    ></div>
-                </div>
-                <div class="bento-column span-2">
-                    <div
-                        class="box span-1 bento-item"
-                        style="
-                            background-image: url('images/4.webp');
-                            border: none;
-                        "
-                    ></div>
-                    <div class="box span-1" style="border: none">
-                        <div class="bento-group">
-                            <div
-                                class="box span-2 bento-group vertical"
-                                style="border: none"
-                            >
-                                <div class="box span-2"></div>
-                                <div class="box span-1"></div>
-                            </div>
-                            <div
-                                class="box span-1 bento-group vertical"
-                                style="border: none"
-                            >
-                                <div class="box span-1"></div>
+            <!-- ABOUT SECTION-->
+            <section aria-label="Sezione About">
+                <div class="bento-grid" style="max-height: 520px">
+                    <div class="bento-column span-1">
+                        <div
+                            class="box span-1 skill-content"
+                        >
+                            <h3 class="skill-content__subtitle">My Skills</h3>
+                            <h1 class="skill-content__title">
+                                Beautiful and unique digital experiences
+                            </h1>
+                            <p class="skill-content__description">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bento-column span-2">
+                        <div class="box span-2">
+                            <div class="bento-group">
                                 <div
-                                    class="box span-2 bento-item"
-                                    style="
-                                        background-image: url('images/5.jpg');
-                                        border: none;
-                                    "
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                                    class="box span-1 bento-column"
+                                >
+                                    <article
+                                        class="box span-1 skill-card"
+                                        style="margin-top: 50px;"
+                                    >
+                                        <div class="skill-card__left">
+                                            <div class="skill-card__icon">
+                                                <img
+                                                    src="images/logo-php.png"
+                                                    alt="Logo PHP"
+                                                    class="skill-card__icon-img"
+                                                />
+                                            </div>
+                                            <h3 class="skill-card__title">
+                                                PHP
+                                            </h3>
+                                            <p class="skill-card__description">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div class="skill-card__right">
+                                            <img
+                                                class="skill-card__image"
+                                                src="images/php.webp"
+                                                alt="Logo PHP"
+                                            />
+                                        </div>
+                                    </article>
 
-        <section class="experience">
-            <h2>Experience</h2>
-            <div class="bento-grid" style="height: 350px">
-                <div class="bento-column span-1">
-                    <div class="box span-1 card" style="border: none">
-                        <div class="card_image">
-                            <img
-                                src="https://assets.codepen.io/652/photo-1468777675496-5782faaea55b.jpeg"
-                                alt="mixed vegetable salad in a mason jar."
-                            />
-                        </div>
-                        <div class="card_content">
-                            <h2 class="card_title">2024</h2>
-                            <div class="card_text">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur
-                                    adipisicing elit. Vitae est consequuntur
-                                    iure aliquam cumque laborum illo tempora
-                                    dolor beatae facilis et velit provident
-                                    iusto esse unde, explicabo sequi perferendis
-                                    fuga?
-                                </p>
+                                    <article
+                                        class="box span-2 skill-card skill-card__column"
+                                        style="margin-left: 50px;"
+                                    >
+                                        <div class="skill-card__top">
+                                            <div class="skill-card__icon">
+                                                <img
+                                                    class="skill-card__image"
+                                                    src="images/logo-html5.png"
+                                                    alt="Logo HTML5"
+                                                />
+                                            </div>
+                                            <h3 class="skill-card__title">
+                                                HTML
+                                            </h3>
+                                            <p class="skill-card__description">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div class="skill-card__bottom">
+                                            <img
+                                                class="skill-card__image"
+                                                src="images/html.webp"
+                                                alt="Logo HTML"
+                                            />
+                                        </div>
+                                    </article>
+                                </div>
+                                <div
+                                    class="box span-1 bento-column"
+                                >
+                                    <article
+                                        class="box span-2 skill-card skill-card__column"
+                                        style="margin-right: 50px;"
+                                    >
+                                        <div class="skill-card__top">
+                                            <div class="skill-card__icon">
+                                                <img
+                                                    class="skill-card__image"
+                                                    src="images/logo-mysql.png"
+                                                    alt="Logo MYSQL"
+                                                />
+                                            </div>
+                                            <h3 class="skill-card__title">
+                                                mysql
+                                            </h3>
+                                            <p class="skill-card__description">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div class="skill-card__bottom">
+                                            <img
+                                                class="skill-card__image"
+                                                src="images/sql.jpg"
+                                                alt="Logo MYSQL"
+                                            />
+                                        </div>
+                                    </article>
+                                    <article
+                                        class="box span-1 skill-card"
+                                        style="
+                                            margin-bottom: 50px;
+                                        "
+                                    >
+                                        <div class="skill-card__left">
+                                            <div class="skill-card__icon">
+                                                <img
+                                                    src="images/logo-js.png"
+                                                    alt="Logo Javascript"
+                                                    class="skill-card__icon-img"
+                                                />
+                                            </div>
+                                            <h3 class="skill-card__title">
+                                                JAVASCRIPT
+                                            </h3>
+                                            <p class="skill-card__description">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div class="skill-card__right">
+                                            <img
+                                                class="skill-card__image"
+                                                src="images/js.webp"
+                                                alt="Logo JAVASCRIPT"
+                                            />
+                                        </div>
+                                    </article>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="bento-column span-1">
-                    <div class="box span-1 card" style="border: none">
-                        <div class="card_content">
-                            <h2 class="card_title">2022</h2>
-                            <div class="card_text">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur
-                                    adipisicing elit. Vitae est consequuntur
-                                    iure aliquam cumque laborum illo tempora
-                                    dolor beatae facilis et velit provident
-                                    iusto esse unde, explicabo sequi perferendis
-                                    fuga?
-                                </p>
+            </section>
+
+            <!-- PORTFOLIO SECTION -->
+            <section
+                class="portfolio"
+                aria-label="Portfolio - Lavori in evidenza"
+            >
+                <h1>Featured Works</h1>
+                <div class="bento-grid">
+                    <div class="bento-column span-1">
+                        <div
+                            class="box span-1 bento-item"
+                            style="
+                                background-image: url('images/1.webp');
+                            "
+                            aria-hidden="true"
+                        ></div>
+                        <div
+                            class="box span-2 bento-item"
+                            style="
+                                background-image: url('images/2.webp');
+                            "
+                            aria-hidden="true"
+                        ></div>
+                        <div
+                            class="box span-2 bento-item"
+                            style="
+                                background-image: url('images/3.webp');
+                            "
+                            aria-hidden="true"
+                        ></div>
+                    </div>
+                    <div class="bento-column span-2">
+                        <div
+                            class="box span-1 bento-item"
+                            style="
+                                background-image: url('images/4.webp');
+                                
+                            "
+                            aria-hidden="true"
+                        ></div>
+                        <div class="box span-1">
+                            <div class="bento-group">
+                                <div
+                                    class="box span-2 bento-group vertical"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="box span-2 bento-item"
+                                        style="
+                                            background-image: url('images/6.jpg');
+                                        "
+                                        aria-hidden="true"
+                                    ></div>
+                                    <div class="box span-1 bento-item"
+                                        style="
+                                            background-image: url('images/7.jpg');
+                                        "
+                                        aria-hidden="true""></div>
+                                </div>
+                                <div
+                                    class="box span-1 bento-group vertical"
+                                    aria-hidden="true"
+                                >
+                                    <div class="box span-1 bento-item"
+                                                                        style="
+                                            background-image: url('images/8.jpg');
+                                        "
+                                        aria-hidden="true"
+                                    ></div>
+                                    <div
+                                        class="box span-2 bento-item"
+                                        style="
+                                            background-image: url('images/5.jpg');
+                                        "
+                                        aria-hidden="true"
+                                    ></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="box span-1 bento-group" style="border: none">
-                        <div class="box span-1 card" style="border: none">
+                </div>
+            </section>
+
+            <!-- EXPERIENCE SECTION -->
+            <section class="experience" aria-label="Esperienze">
+                <h2>Experience</h2>
+                <div class="bento-grid" style="height: 350px">
+                    <div class="bento-column span-1">
+                        <article class="box span-1 card">
+                            <figure class="card_image">
+                                <img
+                                    src="images/employees.jpg"
+                                    alt="Gruppo di persone che utilizzano il computer portatile"
+                                />
+                            </figure>
                             <div class="card_content">
-                                <h2 class="card_title">2020</h2>
+                                <h3 class="card_title">2024</h3>
                                 <div class="card_text">
                                     <p>
                                         Lorem, ipsum dolor sit amet consectetur
@@ -162,10 +326,12 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="box span-1 card" style="border: none">
+                        </article>
+                    </div>
+                    <div class="bento-column span-1">
+                        <article class="box span-1 card">
                             <div class="card_content">
-                                <h2 class="card_title">2018</h2>
+                                <h3 class="card_title">2022</h3>
                                 <div class="card_text">
                                     <p>
                                         Lorem, ipsum dolor sit amet consectetur
@@ -177,10 +343,57 @@
                                     </p>
                                 </div>
                             </div>
+                        </article>
+                        <div
+                            class="box span-1 bento-group"
+                        >
+                            <article
+                                class="box span-1 card"
+                            >
+                                <div class="card_content">
+                                    <h3 class="card_title">2020</h3>
+                                    <div class="card_text">
+                                        <p>
+                                            Lorem, ipsum dolor sit amet
+                                            consectetur adipisicing elit. Vitae
+                                            est consequuntur iure aliquam cumque
+                                            laborum illo tempora dolor beatae
+                                            facilis et velit provident iusto
+                                            esse unde, explicabo sequi
+                                            perferendis fuga?
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article
+                                class="box span-1 card"
+                            >
+                                <div class="card_content">
+                                    <h3 class="card_title">2018</h3>
+                                    <div class="card_text">
+                                        <p>
+                                            Lorem, ipsum dolor sit amet
+                                            consectetur adipisicing elit. Vitae
+                                            est consequuntur iure aliquam cumque
+                                            laborum illo tempora dolor beatae
+                                            facilis et velit provident iusto
+                                            esse unde, explicabo sequi
+                                            perferendis fuga?
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- HTML -->
+        </main>
+
+        <!-- FOOTER -->
+        <footer role="contentinfo">
+            <p>&copy; 2025 Pinti Vittorio. Tutti i diritti riservati.</p>
+        </footer>
     </body>
 </html>

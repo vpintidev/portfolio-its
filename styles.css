@@ -1,5 +1,8 @@
-/* Importa un font moderno */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+    --primary-color: #6a52ff;
+}
 
 /* Reset generale */
 * {
@@ -12,6 +15,7 @@
 body {
     background-color: #1a1a1a;
     color: white;
+    padding: 16px;
 }
 
 /* HEADER */
@@ -30,7 +34,6 @@ body {
     padding: 0 20px;
 }
 
-/* Stile menu */
 .nav-links {
     list-style: none;
     display: flex;
@@ -47,22 +50,19 @@ body {
     transition: 0.3s ease-in-out;
 }
 
-/* Stile per il pulsante attivo */
 .nav-links .active {
-    background: #6a52ff;
+    background: var(--primary-color);
     font-weight: 600;
     color: white;
 }
 
-/* Effetto hover */
 .nav-links li a:hover {
-    background: #6a52ff;
+    background: var(--primary-color);
     color: white;
 }
 
-/* Logo al centro */
 .logo {
-    background: #6a52ff;
+    background: var(--primary-color);
     color: white;
     font-weight: 700;
     font-size: 18px;
@@ -96,7 +96,7 @@ body {
 }
 
 .hero-content h1 span {
-    color: #6a52ff;
+    color: var(--primary-color);
 }
 
 .hero-content p {
@@ -105,7 +105,6 @@ body {
     color: #bbb;
 }
 
-/* Bottoni */
 .buttons {
     display: flex;
     gap: 15px;
@@ -123,7 +122,7 @@ body {
 }
 
 .btn-dark {
-    background: #6a52ff;
+    background: var(--primary-color);
     color: white;
     padding: 12px 20px;
     border-radius: 8px;
@@ -140,9 +139,8 @@ body {
     background: #5a42e0;
 }
 
-/* HERO IMAGE */
 .hero-image {
-    background: #6a52ff;
+    background: var(--primary-color);
     padding: 20px;
     border-radius: 20px;
 }
@@ -153,33 +151,7 @@ body {
     border-radius: 10px;
 }
 
-/* Sfondo colorato */
-.color1 {
-    background: #ff6b6b;
-} /* Rosso */
-.color2 {
-    background: #6b6bff;
-} /* Blu */
-.color3 {
-    background: #ffd166;
-} /* Giallo */
-.color4 {
-    background: #06d6a0;
-} /* Verde */
-.color5 {
-    background: #8338ec;
-} /* Viola */
-.color6 {
-    background: #ff9f1c;
-} /* Arancione */
-.color7 {
-    background: #ef476f;
-} /* Rosa */
-.color8 {
-    background: #118ab2;
-} /* Blu petrolio */
-
-/* Section */
+/* SECTION */
 section {
     max-width: 1100px;
     margin: 50px auto;
@@ -201,7 +173,7 @@ section h2 {
     font-weight: 700;
 }
 
-/* Bento Grid */
+/* BENTO GRID */
 .bento-grid {
     display: flex;
     max-width: 1100px;
@@ -223,17 +195,16 @@ section h2 {
 
 .bento-item {
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
 }
 
-/* Box */
+/* BOX */
 .box {
     border-radius: 20px;
-    border: 2px solid red;
 }
 
-/* Flex Direction */
+/* FLEX DIRECTION */
 .vertical {
     flex-direction: column;
 }
@@ -242,7 +213,7 @@ section h2 {
     flex-direction: row;
 }
 
-/* Span */
+/* SPAN */
 .span-1 {
     flex: 1;
 }
@@ -251,11 +222,14 @@ section h2 {
     flex: 2;
 }
 
-/* Card */
+.span-3 {
+    flex: 3;
+}
+
+/* CARD */
 .card {
     background-color: #3e3d4b;
     border-radius: 20px;
-    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -291,4 +265,113 @@ section h2 {
     font-size: 0.8em;
     line-height: 1.5;
     align-content: center;
+}
+
+/* SKILL CARD */
+.skill-card {
+    display: flex;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    overflow: hidden;
+    color: #fff;
+    padding: 12px;
+}
+
+.skill-card__column {
+    flex-direction: column;
+}
+
+.skill-card__left {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: left;
+}
+
+.skill-card__top {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: left;
+}
+
+.skill-card__icon {
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-card__icon-img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.skill-card__title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.skill-card__description {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.skill-card__right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.skill-card__bottom {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.skill-card__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.skill-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    text-align: left;
+}
+
+.skill-content__subtitle {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.skill-content__title {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.skill-content__description {
+    font-size: 1rem;
+    line-height: 1.6;
 }
