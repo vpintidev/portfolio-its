@@ -1,0 +1,294 @@
+/* Importa un font moderno */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* Reset generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+/* HEADER */
+.navbar {
+    width: 100%;
+    background-color: #191919;
+    padding: 20px 0;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Stile menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Stile per il pulsante attivo */
+.nav-links .active {
+    background: #6a52ff;
+    font-weight: 600;
+    color: white;
+}
+
+/* Effetto hover */
+.nav-links li a:hover {
+    background: #6a52ff;
+    color: white;
+}
+
+/* Logo al centro */
+.logo {
+    background: #6a52ff;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.hero-content h1 span {
+    color: #6a52ff;
+}
+
+.hero-content p {
+    margin: 15px 0;
+    font-size: 16px;
+    color: #bbb;
+}
+
+/* Bottoni */
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-light {
+    background: white;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-dark {
+    background: #6a52ff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-light:hover {
+    background: #bbb;
+}
+
+.btn-dark:hover {
+    background: #5a42e0;
+}
+
+/* HERO IMAGE */
+.hero-image {
+    background: #6a52ff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.hero-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Sfondo colorato */
+.color1 {
+    background: #ff6b6b;
+} /* Rosso */
+.color2 {
+    background: #6b6bff;
+} /* Blu */
+.color3 {
+    background: #ffd166;
+} /* Giallo */
+.color4 {
+    background: #06d6a0;
+} /* Verde */
+.color5 {
+    background: #8338ec;
+} /* Viola */
+.color6 {
+    background: #ff9f1c;
+} /* Arancione */
+.color7 {
+    background: #ef476f;
+} /* Rosa */
+.color8 {
+    background: #118ab2;
+} /* Blu petrolio */
+
+/* Section */
+section {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+section > *:first-child {
+    text-align: center;
+    margin-bottom: 0.6em;
+}
+
+section h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+section h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/* Bento Grid */
+.bento-grid {
+    display: flex;
+    max-width: 1100px;
+    height: 700px;
+    gap: 1em;
+}
+
+.bento-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.bento-group {
+    display: flex;
+    height: 100%;
+    gap: 1em;
+}
+
+.bento-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Box */
+.box {
+    border-radius: 20px;
+    border: 2px solid red;
+}
+
+/* Flex Direction */
+.vertical {
+    flex-direction: column;
+}
+
+.horizontal {
+    flex-direction: row;
+}
+
+/* Span */
+.span-1 {
+    flex: 1;
+}
+
+.span-2 {
+    flex: 2;
+}
+
+/* Card */
+.card {
+    background-color: #3e3d4b;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0.7em;
+}
+
+.card_image {
+    position: relative;
+    max-height: 200px;
+    margin-bottom: 10px;
+}
+
+.card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card_content {
+    position: relative;
+    max-height: 290px;
+    padding: 0 0.5em;
+}
+
+.card_title {
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card_text p {
+    font-size: 0.8em;
+    line-height: 1.5;
+    align-content: center;
+}
