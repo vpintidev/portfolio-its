@@ -5,8 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="Portfolio di Jon Dawson, Web Developer. Scopri i featured works, le esperienze e i contatti."
+            content="Portfolio di Vittorio Pinti, Web Developer. Scopri i featured works, le esperienze e i contatti."
         />
+        <meta name="robots" content="index, follow" />
         <title>Portfolio - Vittorio Pinti</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
@@ -21,14 +22,26 @@
                     <li>
                         <a href="#" class="active" aria-current="page">Home</a>
                     </li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Service</a></li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#services">Service</a>
+                    </li>
                 </ul>
-                <div class="logo">VP</div>
+                <a href="#" class="logo" aria-label="Homepage">
+                    <span>VP</span>
+                </a>
                 <ul class="nav-links">
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -36,9 +49,9 @@
         <!-- MAIN -->
         <main id="main" role="main">
             <!-- HERO SECTION -->
-            <section class="hero" aria-label="Sezione Hero">
+            <section class="hero" aria-labelledby="hero-heading">
                 <div class="hero-content">
-                    <h1>
+                    <h1 id="hero-heading">
                         I'm Vittorio Pinti,<br />
                         <span>Web Developer</span>
                     </h1>
@@ -49,37 +62,39 @@
                     </p>
                     <div class="buttons">
                         <a
-                            href="#"
+                            href="#about"
                             class="btn-light"
                             role="button"
                             aria-label="Informazioni su di me"
                             >About</a
                         >
                         <a
-                            href="#"
+                            href="cv.pdf"
                             class="btn-dark"
                             role="button"
                             aria-label="Scarica il CV"
+                            download
                             >Download CV</a
                         >
                     </div>
                 </div>
                 <figure class="hero-image">
-                    <img src="images/profile.png" alt="Jon Dawson" />
+                    <img
+                        src="images/profile.png"
+                        alt="Foto di Vittorio Pinti"
+                    />
                 </figure>
             </section>
 
-            <!-- ABOUT SECTION-->
-            <section aria-label="Sezione About">
+            <!-- ABOUT SECTION -->
+            <section id="about" aria-labelledby="about-heading">
                 <div class="bento-grid" style="max-height: 520px">
                     <div class="bento-column span-1">
-                        <div
-                            class="box span-1 skill-content"
-                        >
+                        <div class="box span-1 skill-content">
                             <h3 class="skill-content__subtitle">My Skills</h3>
-                            <h1 class="skill-content__title">
+                            <h2 class="skill-content__title">
                                 Beautiful and unique digital experiences
-                            </h1>
+                            </h2>
                             <p class="skill-content__description">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
@@ -90,12 +105,10 @@
                     <div class="bento-column span-2">
                         <div class="box span-2">
                             <div class="bento-group">
-                                <div
-                                    class="box span-1 bento-column"
-                                >
+                                <div class="box span-1 bento-column">
                                     <article
                                         class="box span-1 skill-card"
-                                        style="margin-top: 50px;"
+                                        style="margin-top: 50px"
                                     >
                                         <div class="skill-card__left">
                                             <div class="skill-card__icon">
@@ -117,14 +130,14 @@
                                             <img
                                                 class="skill-card__image"
                                                 src="images/php.webp"
-                                                alt="Logo PHP"
+                                                alt="Immagine rappresentativa di PHP"
                                             />
                                         </div>
                                     </article>
 
                                     <article
                                         class="box span-2 skill-card skill-card__column"
-                                        style="margin-left: 50px;"
+                                        style="margin-left: 50px"
                                     >
                                         <div class="skill-card__top">
                                             <div class="skill-card__icon">
@@ -146,28 +159,26 @@
                                             <img
                                                 class="skill-card__image"
                                                 src="images/html.webp"
-                                                alt="Logo HTML"
+                                                alt="Immagine rappresentativa di HTML"
                                             />
                                         </div>
                                     </article>
                                 </div>
-                                <div
-                                    class="box span-1 bento-column"
-                                >
+                                <div class="box span-1 bento-column">
                                     <article
                                         class="box span-2 skill-card skill-card__column"
-                                        style="margin-right: 50px;"
+                                        style="margin-right: 50px"
                                     >
                                         <div class="skill-card__top">
                                             <div class="skill-card__icon">
                                                 <img
                                                     class="skill-card__image"
                                                     src="images/logo-mysql.png"
-                                                    alt="Logo MYSQL"
+                                                    alt="Logo MySQL"
                                                 />
                                             </div>
                                             <h3 class="skill-card__title">
-                                                mysql
+                                                MySQL
                                             </h3>
                                             <p class="skill-card__description">
                                                 Lorem ipsum dolor sit amet,
@@ -178,26 +189,24 @@
                                             <img
                                                 class="skill-card__image"
                                                 src="images/sql.jpg"
-                                                alt="Logo MYSQL"
+                                                alt="Immagine rappresentativa di MySQL"
                                             />
                                         </div>
                                     </article>
                                     <article
                                         class="box span-1 skill-card"
-                                        style="
-                                            margin-bottom: 50px;
-                                        "
+                                        style="margin-bottom: 50px"
                                     >
                                         <div class="skill-card__left">
                                             <div class="skill-card__icon">
                                                 <img
                                                     src="images/logo-js.png"
-                                                    alt="Logo Javascript"
+                                                    alt="Logo JavaScript"
                                                     class="skill-card__icon-img"
                                                 />
                                             </div>
                                             <h3 class="skill-card__title">
-                                                JAVASCRIPT
+                                                JavaScript
                                             </h3>
                                             <p class="skill-card__description">
                                                 Lorem ipsum dolor sit amet,
@@ -208,7 +217,7 @@
                                             <img
                                                 class="skill-card__image"
                                                 src="images/js.webp"
-                                                alt="Logo JAVASCRIPT"
+                                                alt="Immagine rappresentativa di JavaScript"
                                             />
                                         </div>
                                     </article>
@@ -221,41 +230,33 @@
 
             <!-- PORTFOLIO SECTION -->
             <section
+                id="portfolio"
                 class="portfolio"
-                aria-label="Portfolio - Lavori in evidenza"
+                aria-labelledby="portfolio-heading"
             >
-                <h1>Featured Works</h1>
+                <h1 id="portfolio-heading">Featured Works</h1>
                 <div class="bento-grid">
                     <div class="bento-column span-1">
                         <div
                             class="box span-1 bento-item"
-                            style="
-                                background-image: url('images/1.webp');
-                            "
+                            style="background-image: url('images/1.webp')"
                             aria-hidden="true"
                         ></div>
                         <div
                             class="box span-2 bento-item"
-                            style="
-                                background-image: url('images/2.webp');
-                            "
+                            style="background-image: url('images/2.webp')"
                             aria-hidden="true"
                         ></div>
                         <div
                             class="box span-2 bento-item"
-                            style="
-                                background-image: url('images/3.webp');
-                            "
+                            style="background-image: url('images/3.webp')"
                             aria-hidden="true"
                         ></div>
                     </div>
                     <div class="bento-column span-2">
                         <div
                             class="box span-1 bento-item"
-                            style="
-                                background-image: url('images/4.webp');
-                                
-                            "
+                            style="background-image: url('images/4.webp')"
                             aria-hidden="true"
                         ></div>
                         <div class="box span-1">
@@ -271,18 +272,21 @@
                                         "
                                         aria-hidden="true"
                                     ></div>
-                                    <div class="box span-1 bento-item"
+                                    <div
+                                        class="box span-1 bento-item"
                                         style="
                                             background-image: url('images/7.jpg');
                                         "
-                                        aria-hidden="true""></div>
+                                        aria-hidden="true"
+                                    ></div>
                                 </div>
                                 <div
                                     class="box span-1 bento-group vertical"
                                     aria-hidden="true"
                                 >
-                                    <div class="box span-1 bento-item"
-                                                                        style="
+                                    <div
+                                        class="box span-1 bento-item"
+                                        style="
                                             background-image: url('images/8.jpg');
                                         "
                                         aria-hidden="true"
@@ -302,15 +306,15 @@
             </section>
 
             <!-- EXPERIENCE SECTION -->
-            <section class="experience" aria-label="Esperienze">
-                <h2>Experience</h2>
+            <section class="experience" aria-labelledby="experience-heading">
+                <h2 id="experience-heading">Experience</h2>
                 <div class="bento-grid" style="height: 350px">
                     <div class="bento-column span-1">
                         <article class="box span-1 card">
                             <figure class="card_image">
                                 <img
                                     src="images/employees.jpg"
-                                    alt="Gruppo di persone che utilizzano il computer portatile"
+                                    alt="Gruppo di persone che utilizzano un computer portatile"
                                 />
                             </figure>
                             <div class="card_content">
@@ -344,12 +348,8 @@
                                 </div>
                             </div>
                         </article>
-                        <div
-                            class="box span-1 bento-group"
-                        >
-                            <article
-                                class="box span-1 card"
-                            >
+                        <div class="box span-1 bento-group">
+                            <article class="box span-1 card">
                                 <div class="card_content">
                                     <h3 class="card_title">2020</h3>
                                     <div class="card_text">
@@ -365,9 +365,7 @@
                                     </div>
                                 </div>
                             </article>
-                            <article
-                                class="box span-1 card"
-                            >
+                            <article class="box span-1 card">
                                 <div class="card_content">
                                     <h3 class="card_title">2018</h3>
                                     <div class="card_text">
@@ -387,13 +385,11 @@
                     </div>
                 </div>
             </section>
-
-            <!-- HTML -->
         </main>
 
         <!-- FOOTER -->
         <footer role="contentinfo">
-            <p>&copy; 2025 Pinti Vittorio. Tutti i diritti riservati.</p>
+            <p>&copy; 2025 Vittorio Pinti. Tutti i diritti riservati.</p>
         </footer>
     </body>
 </html>
