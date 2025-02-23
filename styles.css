@@ -375,3 +375,170 @@ section h2 {
     font-size: 1rem;
     line-height: 1.6;
 }
+
+/* Mobile devices (portrait and landscape) */
+@media (max-width: 767px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin: 0 0 4em 0;
+        max-width: 100%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .bento-grid {
+        flex-direction: column;
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .bento-column {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .bento-group {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .bento-item {
+        min-height: 200px; /* Forza un'altezza minima */
+        width: 100%; /* Assicura che prendano tutta la larghezza */
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skill-card {
+        flex-direction: column;
+        margin: 0 !important;
+    }
+
+    article {
+        margin: 0;
+    }
+
+    section {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    section > :first-child {
+        margin: 0.6em 0;
+    }
+}
+
+/* Tablets (portrait and landscape) */
+/* @media (min-width: 768px) and (max-width: 1023px) {
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .nav-container {
+        padding: 0 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .bento-grid {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .bento-column {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .bento-group {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+} */
+
+/* Desktops and laptops */
+/* @media (min-width: 1024px) {
+    .navbar {
+        padding: 20px 0;
+    }
+
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .hero {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .hero-content {
+        max-width: 50%;
+    }
+
+    .hero-image {
+        margin-top: 0;
+    }
+
+    .bento-grid {
+        flex-direction: row;
+        height: 700px;
+    }
+
+    .bento-column {
+        flex-direction: column;
+    }
+
+    .bento-group {
+        flex-direction: row;
+        height: 100%;
+    }
+
+    .buttons {
+        flex-direction: row;
+        gap: 15px;
+    }
+} */
