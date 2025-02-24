@@ -21,8 +21,9 @@ body {
 /* HEADER */
 .navbar {
     width: 100%;
-    background-color: #191919;
     padding: 20px 0;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .nav-container {
@@ -36,8 +37,22 @@ body {
 
 .nav-links {
     list-style: none;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #1a1a1a;
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links.open {
     display: flex;
-    gap: 25px;
+    gap: 2em;
 }
 
 .nav-links li a {
@@ -61,6 +76,20 @@ body {
     color: white;
 }
 
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
 .logo {
     background: var(--primary-color);
     color: white;
@@ -79,15 +108,17 @@ body {
 /* HERO SECTION */
 .hero {
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 20px;
+    text-align: center;
+    padding: 0;
+    margin: 0 0 4em 0;
+    max-width: 100%;
 }
 
 .hero-content {
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .hero-content h1 {
@@ -107,8 +138,9 @@ body {
 
 .buttons {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
     margin-top: 20px;
+    gap: 10px;
 }
 
 .btn-light {
@@ -143,6 +175,7 @@ body {
     background: var(--primary-color);
     padding: 20px;
     border-radius: 20px;
+    margin-top: 20px;
 }
 
 .hero-image img {
@@ -153,14 +186,14 @@ body {
 
 /* SECTION */
 section {
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 section > *:first-child {
     text-align: center;
-    margin-bottom: 0.6em;
+    margin: 0.6em 0;
 }
 
 section h1 {
@@ -176,27 +209,32 @@ section h2 {
 /* BENTO GRID */
 .bento-grid {
     display: flex;
-    max-width: 1100px;
-    height: 700px;
+    flex-direction: column;
+    width: 100%;
     gap: 1em;
+    height: auto;
 }
 
 .bento-column {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    flex-wrap: wrap;
 }
 
 .bento-group {
     display: flex;
-    height: 100%;
+    flex-direction: column;
     gap: 1em;
+    height: auto;
 }
 
 .bento-item {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    min-height: 200px;
+    width: 100%;
 }
 
 /* BOX */
@@ -206,7 +244,7 @@ section h2 {
 
 /* FLEX DIRECTION */
 .vertical {
-    flex-direction: column;
+    flex-direction: column !important;
 }
 
 .horizontal {
@@ -270,15 +308,17 @@ section h2 {
 /* SKILL CARD */
 .skill-card {
     display: flex;
+    flex-direction: column;
     background-color: var(--primary-color);
     border-radius: 12px;
     overflow: hidden;
     color: #fff;
     padding: 12px;
+    margin: 0;
 }
 
 .skill-card__column {
-    flex-direction: column;
+    flex-direction: column !important;
 }
 
 .skill-card__left {
@@ -376,160 +416,73 @@ section h2 {
     line-height: 1.6;
 }
 
-/* Mobile devices (portrait and landscape) */
-@media (max-width: 767px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 0;
-        margin: 0 0 4em 0;
-        max-width: 100%;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .hero-image {
-        margin-top: 20px;
-    }
-
-    .bento-grid {
-        flex-direction: column;
-        height: auto !important;
-        max-height: unset !important;
-    }
-
-    .bento-column {
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    .bento-group {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .bento-item {
-        min-height: 200px; /* Forza un'altezza minima */
-        width: 100%; /* Assicura che prendano tutta la larghezza */
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .skill-card {
-        flex-direction: column;
-        margin: 0 !important;
-    }
-
-    article {
-        margin: 0;
-    }
-
-    section {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    footer {
-        text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-
-    section > :first-child {
-        margin: 0.6em 0;
-    }
+article {
+    margin: 0;
 }
 
-/* Tablets (portrait and landscape) */
-/* @media (min-width: 768px) and (max-width: 1023px) {
-    .navbar {
-        padding: 15px 0;
+footer {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        gap: 25px;
+        flex-direction: row;
+        position: static;
+        width: 100%;
+        height: 0;
     }
 
-    .nav-container {
-        padding: 0 15px;
+    .hamburger {
+        display: none;
     }
 
     .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .hero-image {
-        margin-top: 20px;
-    }
-
-    .bento-grid {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .bento-column {
+        display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .bento-group {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-} */
-
-/* Desktops and laptops */
-/* @media (min-width: 1024px) {
-    .navbar {
-        padding: 20px 0;
-    }
-
-    .nav-container {
-        padding: 0 20px;
-    }
-
-    .hero {
-        flex-direction: row;
-        text-align: left;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 50px auto;
+        padding: 20px;
     }
 
     .hero-content {
         max-width: 50%;
     }
 
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
     .hero-image {
         margin-top: 0;
     }
 
+    section {
+        max-width: 1100px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    section > *:first-child {
+        margin-bottom: 0.6em 0;
+    }
+
     .bento-grid {
+        display: flex;
         flex-direction: row;
-        height: 700px;
     }
 
     .bento-column {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .bento-group {
@@ -537,8 +490,23 @@ section h2 {
         height: 100%;
     }
 
-    .buttons {
+    .skill-card {
         flex-direction: row;
-        gap: 15px;
     }
-} */
+
+    .spacer-top {
+        margin-top: 50px;
+    }
+
+    .spacer-bottom {
+        margin-bottom: 50px;
+    }
+
+    .spacer-left {
+        margin-left: 30px;
+    }
+
+    .spacer-right {
+        margin-right: 30px;
+    }
+}

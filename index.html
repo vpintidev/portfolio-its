@@ -10,40 +10,37 @@
         <meta name="robots" content="index, follow" />
         <title>Portfolio - Vittorio Pinti</title>
         <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     </head>
     <body>
         <!-- HEADER -->
         <header role="banner">
-            <nav
-                class="navbar nav-container"
-                aria-label="Navigazione principale"
-            >
-                <ul class="nav-links">
-                    <li>
-                        <a href="#" class="active" aria-current="page">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#services">Service</a>
-                    </li>
-                </ul>
-                <a href="#" class="logo" aria-label="Homepage">
+            <div class="nav-container">
+                <p href="#" class="logo" aria-label="Homepage">
                     <span>VP</span>
-                </a>
-                <ul class="nav-links">
-                    <li>
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#experience">Experience</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+                </p>
+                <nav aria-label="Navigazione principale">
+                    <ul class="nav-links">
+                        <li>
+                            <a href="#" class="active" aria-current="page"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#experience">Experience</a>
+                        </li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </nav>
+            </div>
         </header>
 
         <!-- MAIN -->
@@ -88,7 +85,7 @@
 
             <!-- ABOUT SECTION -->
             <section id="about" aria-labelledby="about-heading">
-                <div class="bento-grid" style="max-height: 520px">
+                <div class="bento-grid">
                     <div class="bento-column span-1">
                         <div class="box span-1 skill-content">
                             <h3 class="skill-content__subtitle">My Skills</h3>
@@ -107,8 +104,7 @@
                             <div class="bento-group">
                                 <div class="box span-1 bento-column">
                                     <article
-                                        class="box span-1 skill-card"
-                                        style="margin-top: 50px"
+                                        class="box span-1 skill-card spacer-top"
                                     >
                                         <div class="skill-card__left">
                                             <div class="skill-card__icon">
@@ -136,8 +132,7 @@
                                     </article>
 
                                     <article
-                                        class="box span-2 skill-card skill-card__column"
-                                        style="margin-left: 50px"
+                                        class="box span-2 skill-card skill-card__column spacer-left"
                                     >
                                         <div class="skill-card__top">
                                             <div class="skill-card__icon">
@@ -166,8 +161,7 @@
                                 </div>
                                 <div class="box span-1 bento-column">
                                     <article
-                                        class="box span-2 skill-card skill-card__column"
-                                        style="margin-right: 50px"
+                                        class="box span-2 skill-card skill-card__column spacer-right"
                                     >
                                         <div class="skill-card__top">
                                             <div class="skill-card__icon">
@@ -194,8 +188,7 @@
                                         </div>
                                     </article>
                                     <article
-                                        class="box span-1 skill-card"
-                                        style="margin-bottom: 50px"
+                                        class="box span-1 skill-card spacer-bottom"
                                     >
                                         <div class="skill-card__left">
                                             <div class="skill-card__icon">
@@ -312,7 +305,7 @@
                 aria-labelledby="experience-heading"
             >
                 <h2 id="experience-heading">Experience</h2>
-                <div class="bento-grid" style="height: 350px">
+                <div class="bento-grid">
                     <div class="bento-column span-1">
                         <article class="box span-1 card">
                             <figure class="card_image">
@@ -395,5 +388,15 @@
         <footer role="contentinfo">
             <p>&copy; 2025 Vittorio Pinti. Tutti i diritti riservati.</p>
         </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const hamburger = document.querySelector(".hamburger");
+                const navLinks = document.querySelector(".nav-links");
+
+                hamburger.addEventListener("click", () => {
+                    navLinks.classList.toggle("open");
+                });
+            });
+        </script>
     </body>
 </html>
