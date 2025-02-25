@@ -476,6 +476,10 @@ footer {
         margin-bottom: 0.6em 0;
     }
 
+    footer {
+        text-align: left;
+    }
+
     .bento-grid {
         display: flex;
         flex-direction: row;
@@ -508,5 +512,13 @@ footer {
 
     .spacer-right {
         margin-right: 30px;
+    }
+
+    #portfolio > .bento-grid {
+        height: 700px;
+    }
+
+    #portfolio .bento-item {
+        min-height: unset !important;
     }
 }
