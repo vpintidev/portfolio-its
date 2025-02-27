@@ -565,9 +565,4 @@ footer {
     #back-to-top {
         bottom: 2em;
     }
-
-    section a {
-        display: flex;
-        flex: 1;
-    }
 }
