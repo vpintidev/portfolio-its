@@ -564,7 +564,7 @@ footer {
         bottom: 2em;
     }
 
-    section > a {
+    section a {
         display: flex;
         flex: 1;
     }
