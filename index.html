@@ -9,6 +9,10 @@
         />
         <meta name="robots" content="index, follow" />
         <title>Portfolio - Vittorio Pinti</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
         <link rel="stylesheet" href="styles.css" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     </head>
@@ -66,7 +70,7 @@
                             >About</a
                         >
                         <a
-                            href="cv.pdf"
+                            href="CVPintiVittorio-web.pdf"
                             class="btn-dark"
                             role="button"
                             aria-label="Scarica il CV"
@@ -382,6 +386,7 @@
                     </div>
                 </div>
             </section>
+            <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
         </main>
 
         <!-- FOOTER -->
@@ -396,6 +401,19 @@
                 hamburger.addEventListener("click", () => {
                     navLinks.classList.toggle("open");
                 });
+            });
+            const backToTop = document.getElementById("back-to-top");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > window.innerHeight * 0.5) {
+                    backToTop.style.visibility = "visible";
+                } else {
+                    backToTop.style.visibility = "hidden";
+                }
+            });
+
+            backToTop.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
             });
         </script>
     </body>

@@ -18,7 +18,22 @@ body {
     padding: 16px;
 }
 
+main {
+    margin-top: 60px;
+}
+
 /* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    height: 60px;
+    z-index: 10;
+}  
+
 .navbar {
     width: 100%;
     padding: 20px 0;
@@ -426,8 +441,31 @@ footer {
     margin-bottom: 1em;
 }
 
+#back-to-top {
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    cursor: pointer;
+    bottom: 4em;
+    right: 1em;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+    }
+    
     .nav-links {
         display: flex;
         gap: 25px;
@@ -520,5 +558,14 @@ footer {
 
     #portfolio .bento-item {
         min-height: unset !important;
+    }
+
+    #back-to-top {
+        bottom: 2em;
+    }
+
+    section > a {
+        display: flex;
+        flex: 1;
     }
 }
